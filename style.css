@@ -1,16 +1,47 @@
 * { margin: 0; padding: 0; }
 
-html, body {
-    overflow-x: hidden;
-    scroll-behavior: smooth
+@media (width<=1000px) {
+    body ~ * {
+        display: none; !important;
+    }
+
+    html, body {
+        overflow: hidden;
+        background: #37016a;
+    }
+
+    .not-supported {
+        left: 2vw;
+        height: 95vh;
+        width: 95vw;
+        position: fixed;
+        top: 2vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #230047;
+        border: #5531AA solid 3px;
+        border-radius: 12px;
+        color: #5531AA;
+        box-shadow: 10px 10px 1px #5531AA;
+        z-index: 2;
+    }
+
+    .not-supported > h1 {
+        display: inline;
+    }
 }
 
-.montserrat-font {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-size: 42px;
+
+@media (width>1000px) {
+    div.not-supported > h1 {
+        display: none;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        scroll-behavior: smooth
+    }
 }
 
 body > div {
@@ -141,6 +172,11 @@ body > div {
     display: flex;
 }
 
+.map > svg {
+    resize: both;
+    width: 50vw;
+}
+
 svg > path {
     stroke: #5531AA;
     transition: all .6s ease-in-out;
@@ -171,7 +207,6 @@ svg > path {
 }
 
 .map {
-    float: left;
     margin-left: 5em;
     margin-right: 5em;
 }
@@ -193,7 +228,7 @@ svg > path {
     font-family: Unbounded, -apple-system, Roboto, sans-serif;
     font-weight: 800;
     flex-direction: row;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -207,6 +242,7 @@ svg > path {
     margin: 3em;
     text-align: center;
     transition: all .3s ease-in-out;
+    width: 33vw;
 }
 
 #download > div > div {
@@ -218,11 +254,12 @@ svg > path {
     margin: 1em;
     --main-color: #5531AA;
     color: var(--main-color);
-    padding: 0.5em 0.5em 0.5em 9em;
+    padding: 0.5em 0.5em 0.5em 10vw;
     background: #37016a;
     border-radius: 12px;
     transition: all .3s ease;
 }
+
 
 #download > div > div:hover {
     background: #4f0493;
@@ -291,12 +328,10 @@ svg > path {
     margin-top: 5em;
 }
 
-#loc-text > h2 {
-    white-space: nowrap;
-}
-
-#loc-text > h3 {
-    line-height: 1.5em;
+.not-supported > h1 {
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 900;
+    font-size: 2em;
 }
 
 .cursor {
@@ -340,6 +375,7 @@ svg > path {
 
 #footer > div > a {
     margin-right: 5em;
+    white-space: nowrap;
 }
 
 #footer > img {
@@ -348,10 +384,6 @@ svg > path {
     height: 10em;
     align-self: start;
     margin-right: 10em;
-}
-
-.vertical-line {
-    /*border-right: thick solid #5531AA;*/
 }
 
 #buy {
@@ -374,6 +406,7 @@ svg > path {
     color: #5531AA;
     text-align: center;
     box-shadow: 10px 10px 1px #5531AA;
+    width: 25vw;
 }
 
 .price {
