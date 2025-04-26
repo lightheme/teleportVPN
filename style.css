@@ -1,0 +1,432 @@
+* { margin: 0; padding: 0; }
+
+html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth
+}
+
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 42px;
+}
+
+body > div {
+    width: 100%;
+}
+
+::selection {
+    background: rgba(85, 49, 170, 0.60);
+}
+
+.start-buy-button {
+    position: absolute;
+    background: #5531AA;
+    margin-top: 370px;
+    margin-left: 52px;
+    user-select: none;
+    border-radius: 12px;
+    color: black;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-align: center;
+    padding: calc(.5em - 1px) 1em;
+    transition-property: background, color, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.start-buy-button:hover {
+    background: #230047;
+    color: #5531AA;
+    border-color: #5531AA;
+}
+
+.start-title {
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 800;
+    position: absolute;
+    color: #5531AA;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 50px;
+    font-size: 2.3rem;
+}
+
+
+.start-text {
+    position: absolute;
+    margin-top: 275px;
+    margin-left: 52px;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    color: #5531AA;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.sansita-black {
+    font-family: "Sansita", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+#header {
+    background: #130522;
+    height: 50px;
+    display: flex;
+    border-bottom: #7352c6 solid 2px;
+}
+
+#header > a:not(:first-child):hover {
+    color: #fff;
+}
+
+#header > a > img {
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: calc(75vw - 90px - 4em - 400px - 4em);
+}
+
+#header > #header-buy {
+    background: #5531AA;
+    border-radius: 12px;
+    color: #000;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-align: center;
+    padding: calc(.5em - 1px) 1em;
+    transition-property: background, color, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+#header > #header-buy:hover {
+    background: #37016a;
+    color: #5531AA;
+    border-color: #5531AA;
+}
+
+#header > a:not(:first-child){
+    margin-left: 5vw;
+    text-align:center;
+    vertical-align: middle;
+    text-decoration: none;
+    user-select: none;
+    color: #5531AA;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: calc(.5em - 1px) 1em;
+    margin-top: calc(.3em);
+    transition: color .2s ease-in-out;
+}
+
+#locations {
+    text-align: center;
+}
+
+#loc-main {
+    display: flex;
+}
+
+svg > path {
+    stroke: #5531AA;
+    transition: all .6s ease-in-out;
+}
+
+.path_chosen {
+    fill: #5531AA;
+}
+
+#portal-gif {
+    position: relative;
+    height: 750px;
+    left: 75%;
+    transform: rotate(100deg);
+}
+
+#start {
+    overflow: hidden;
+}
+
+#main {
+    background: linear-gradient(to bottom, #130522, rgba(19, 5, 34, 0.9999));
+}
+
+#main > div {
+    height: 750px;
+    width: 100%;
+}
+
+.map {
+    float: left;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.map-title {
+    padding-top: 1.5em;
+    padding-left: 1.6em;
+    text-align: center;
+}
+
+.title-font-setting {
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #5531AA;
+}
+
+#download {
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 800;
+    flex-direction: row;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#download > div {
+    background: #230047;
+    border: #5531AA solid 1px;
+    border-radius: 12px;
+    padding: 1em;
+    margin: 3em;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+#download > div > div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-shrink: 0;
+    margin: 1em;
+    --main-color: #5531AA;
+    color: var(--main-color);
+    padding: 0.5em 0.5em 0.5em 9em;
+    background: #37016a;
+    border-radius: 12px;
+    transition: all .3s ease;
+}
+
+#download > div > div:hover {
+    background: #4f0493;
+    --main-color: #37016a;
+}
+
+.device-icon {
+    background: var(--main-color);
+    display: inline-block;
+    height: 50px;
+    margin-right: 1em;
+    width: 50px;
+    transition: all .3s ease;
+}
+
+.ios-icon {
+    -webkit-mask-image: url('./src/imgs/icons/ios.svg');
+    mask-image: url('./src/imgs/icons/ios.svg');
+}
+
+.android-icon {
+    -webkit-mask-image: url('./src/imgs/icons/android.svg');
+    mask-image: url('./src/imgs/icons/android.svg');
+}
+
+.apk-icon {
+    -webkit-mask-image: url('./src/imgs/icons/apk.svg');
+    mask-image: url('./src/imgs/icons/apk.svg');
+}
+
+.linux-icon {
+    -webkit-mask-image: url('./src/imgs/icons/linux.svg');
+    mask-image: url('./src/imgs/icons/linux.svg');
+}
+
+.macos-icon {
+    -webkit-mask-image: url('./src/imgs/icons/macos.svg');
+    mask-image: url('./src/imgs/icons/macos.svg');
+}
+
+.win-icon {
+    -webkit-mask-image: url('./src/imgs/icons/win.svg');
+    mask-image: url('./src/imgs/icons/win.svg');
+}
+
+.expand-glow {
+    transform: scale(1.15);
+    box-shadow: 0 0 5em #4f0493;
+}
+
+.animation-move-left {
+    position: relative;
+    transform: translateX(-5em);
+}
+
+.animation-move-right {
+    position: relative;
+    transform: translateX(5em);
+}
+
+#loc-text {
+    color: #5531AA;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    text-align: left;
+    margin-right: 3em;
+    margin-top: 5em;
+}
+
+#loc-text > h2 {
+    white-space: nowrap;
+}
+
+#loc-text > h3 {
+    line-height: 1.5em;
+}
+
+.cursor {
+    animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.using-colors {
+    color: #130522;/*экран*/
+    color: #230047;/*боковые кнопки и тень*/
+    color: #37016a;/*светлые кноки*/
+    color: #4f0493;
+    color: #5531AA;/*обертка*/
+    color: #7352c6;
+}
+
+#footer {
+    background: #000000;
+    padding: 5em;
+    display: flex;
+    color: #7352c6;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer > div > h1 {
+    margin-top: 1em;
+    color: #7352c6;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 800;
+}
+#footer > div {
+    text-align: center;
+    /*padding-left: 5em;*/
+}
+
+#footer > div > a {
+    margin-right: 5em;
+}
+
+#footer > img {
+    display: inline-block;
+    position: relative;
+    height: 10em;
+    align-self: start;
+    margin-right: 10em;
+}
+
+.vertical-line {
+    /*border-right: thick solid #5531AA;*/
+}
+
+#buy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#buy > div {
+    padding: 1em 3em 1em 3em;
+    display: flex;
+    flex-direction: column;
+    font-family: Unbounded, -apple-system, Roboto, sans-serif;
+    font-weight: 800;
+    background: #230047;
+    border: #5531AA solid 3px;
+    border-radius: 12px;
+    margin: 2.5em;
+    color: #5531AA;
+    text-align: center;
+    box-shadow: 10px 10px 1px #5531AA;
+}
+
+.price {
+    margin-top: 0.8em;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+#buy > div > button {
+    color: #5531AA;
+    border: solid 3px #5531AA;
+    border-radius: 16px;
+    background: #230047;
+    padding: 2em;
+    margin: 2em;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+button > span {
+    font-weight: 900;
+    font-size: 2em;
+}
+
+#buy > div > button:hover {
+    color: #230047;
+    border: solid 3px #230047;
+    background: #5531AA;
+}
+
+li {
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+
+li:nth-child(1) {
+    list-style-image: url('src/imgs/icons/servers.svg');
+}
+
+li:nth-child(2) {
+    list-style-image: url('src/imgs/icons/internet.svg');
+}
+
+li:nth-child(3) {
+    list-style-image: url('src/imgs/icons/5g.svg');
+}
+
+li:nth-child(4) {
+    list-style-image: url('src/imgs/icons/anon.svg');
+}
+
+li:nth-child(5) {
+    list-style-image: url('src/imgs/icons/support.svg');
+}
